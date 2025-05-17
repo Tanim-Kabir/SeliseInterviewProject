@@ -23,6 +23,12 @@ export class MyLearningComponent implements OnInit {
     this.courseList = this.localStorageService.getLocalStorage('courses');
     this.enrollments = this.localStorageService.getLocalStorage('enrollments');
 
+    this.enrollments = Array.from(
+      new Map(
+        this.enrollments.map((course) => [course.courseId, course])
+      ).values()
+    );
+
     this.enrichedEnrollments = this.enrollments.map((enroll) => {
       const course = this.courseList.find((c) => c.id === enroll.courseId);
       return {

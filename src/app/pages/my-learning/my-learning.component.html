@@ -17,7 +17,7 @@
       columnResizingMode="widget"
       [focusedRowEnabled]="false"
       [rowAlternationEnabled]="false"
-      rowTemplate="rowDonationList"
+      rowTemplate="rowEnrollmentList"
       [wordWrapEnabled]="true"
       [columnAutoWidth]="true"
     >
@@ -63,12 +63,9 @@
       </dxi-column>
       <dxi-column caption="Enrolled At" dataField="enrolledAt" alignment="center">
       </dxi-column>
-      <tbody class="bg-white" *dxTemplate="let row of 'rowDonationList'">
+      <tbody class="bg-white" *dxTemplate="let row of 'rowEnrollmentList'">
         <tr
           style="display: contents !important"
-          class="cursor"
-          title="Details"
-          (click)="goToDetailPage(row?.data?.id)"
         >
           <td>
             <div class="donor-name c_0054a6 text-start">
