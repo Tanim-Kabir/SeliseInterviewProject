@@ -18,10 +18,7 @@ export class CourseDetailComponent implements OnInit {
   prerequisites: Course[] = [];
   userData: LocalStorageDataModel =
     this.localStorageService.getLocalStorage('localStorageData');
-  enrolled: string[] =
-    this.localStorageService
-      .getLocalStorage('localStorageData')
-      .map((item: any) => item.id) || [];
+  enrolled: string[] = this.userData?.courses?.map((item) => item.id) || [];
 
   isPrerequisiteMatched: boolean = true;
 
