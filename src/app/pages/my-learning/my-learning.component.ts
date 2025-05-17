@@ -28,6 +28,7 @@ export class MyLearningComponent implements OnInit {
         this.enrollments.map((course) => [course.courseId, course])
       ).values()
     );
+    console.log(this.enrollments);
 
     this.enrichedEnrollments = this.enrollments.map((enroll) => {
       const course = this.courseList.find((c) => c.id === enroll.courseId);

@@ -9,7 +9,7 @@
     <dx-data-grid
       *ngIf="enrichedEnrollments?.length > 0"
       class="donor_list_data_grid"
-      [dataSource]="courseList"
+      [dataSource]="enrichedEnrollments"
       [showBorders]="false"
       [showColumnLines]="false"
       [showRowLines]="false"
