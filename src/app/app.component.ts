@@ -173,36 +173,7 @@ export class AppComponent implements OnInit {
       progress: 100,
       enrolledAt: '2025-04-01T09:00:00Z',
       completedAt: '2025-04-07T16:00:00Z',
-    },
-    {
-      userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
-      courseId: 'b99f7a69-19e6-4f3f-96b6-7d4f3d7c8b8d',
-      status: 'enrolled',
-      progress: 60,
-      enrolledAt: '2025-04-08T10:30:00Z',
-    },
-    {
-      userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
-      courseId: '58e83e22-9e70-4b96-bb5c-61ea91ad49b4',
-      status: 'completed',
-      progress: 100,
-      enrolledAt: '2025-03-25T08:00:00Z',
-      completedAt: '2025-04-02T12:45:00Z',
-    },
-    {
-      userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
-      courseId: 'f2adad64-88c5-4e7b-81a9-60ce8dfdb42b',
-      status: 'enrolled',
-      progress: 20,
-      enrolledAt: '2025-04-10T14:00:00Z',
-    },
-    {
-      userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
-      courseId: '4c761fa1-8415-426b-bdd7-812b4462cdd1',
-      status: 'enrolled',
-      progress: 40,
-      enrolledAt: '2025-04-11T11:15:00Z',
-    },
+    }
   ];
 
   public setMenuIndex(menu: any): void {

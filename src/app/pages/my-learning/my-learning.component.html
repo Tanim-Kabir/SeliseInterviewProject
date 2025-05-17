@@ -51,6 +51,7 @@
       <dxi-column
         caption="Progress"
         dataField="progress"
+        dataType="number"
         alignment="left"
       ></dxi-column>
       <dxi-column
@@ -60,7 +61,7 @@
         [allowFiltering]="false"
       >
       </dxi-column>
-      <dxi-column caption="Completed At" dataField="completedAt" alignment="center">
+      <dxi-column caption="Enrolled At" dataField="enrolledAt" alignment="center">
       </dxi-column>
       <tbody class="bg-white" *dxTemplate="let row of 'rowDonationList'">
         <tr
@@ -88,7 +89,7 @@
             <div
               class="donor-name"
             >
-              {{ row?.data?.completedAt | date }}
+              {{ row?.data?.enrolledAt | date }}
             </div>
           </td>
         </tr>
