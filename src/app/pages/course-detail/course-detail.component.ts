@@ -69,7 +69,7 @@ export class CourseDetailComponent implements OnInit {
       progress: 0,
       enrolledAt: new Date().toLocaleString(),
     };
-    enrollments.push(courseToBeEnrolled);
-    this.localStorageService.setLocalStorage('enrollments', courseToBeEnrolled);
+    enrollments = [...enrollments, courseToBeEnrolled];
+    this.localStorageService.setLocalStorage('enrollments', enrollments);
   }
 }
