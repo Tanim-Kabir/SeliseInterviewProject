@@ -6,6 +6,7 @@ import { User } from '../../shared/interface/user.interface';
 import { Enrolled } from '../../shared/interface/enrolled.interface';
 import { LocalStorageDataModel } from '../../shared/model/local-storage-data.model';
 import { Enrollment } from '../../shared/interface/enrollment.interface';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-course-detail',
@@ -49,9 +50,10 @@ export class CourseDetailComponent implements OnInit {
       console.log(this.prerequisites);
       console.log(this.enrolled);
 
-      if (this.prerequisites.length === 0) {
-        this.isPrerequisiteMatched = false;
-      } else if (this.prerequisites.length > 0) {
+      // if (this.prerequisites.length === 0) {
+      //   this.isPrerequisiteMatched = false;
+      // } else
+      if (this.prerequisites.length > 0) {
         for (const item of this.prerequisites) {
           if (!this.enrolled.includes(item?.id)) {
             this.isPrerequisiteMatched = false;
@@ -79,5 +81,11 @@ export class CourseDetailComponent implements OnInit {
     };
     enrollments = [...enrollments, courseToBeEnrolled];
     this.localStorageService.setLocalStorage('enrollments', enrollments);
+
+    Swal.fire({
+      icon: 'success',
+      title: 'Success!',
+      text: 'Your action was completed successfully.',
+    });
   }
 }
