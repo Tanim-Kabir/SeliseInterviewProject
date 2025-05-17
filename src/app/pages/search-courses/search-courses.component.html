@@ -1,0 +1,47 @@
+<div class="container mt-4">
+  <h2 class="mb-4 text-primary">Search Courses</h2>
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      placeholder="Search by title or category..."
+      [(ngModel)]="searchQuery"
+      [value]="searchQuery"
+      (input)="onSearch()"
+    />
+  </div>
+
+  <div *ngIf="filteredCourses.length === 0" class="alert alert-warning">
+    No matching courses found.
+  </div>
+
+  <div class="row">
+    <div
+      *ngFor="let course of filteredCourses"
+      class="col-md-6 col-lg-4 mb-4"
+    >
+      <div class="card h-100 shadow-sm border-primary">
+        <div class="card-body">
+          <h5 class="card-title">{{ course.title }}</h5>
+          <p class="card-text">{{ course.description }}</p>
+          <p class="card-text">
+            <strong>Category:</strong> {{ course.category }}
+          </p>
+          <p class="card-text">
+            <strong>Duration:</strong> {{ course.duration }} hrs
+          </p>
+          <p class="card-text">
+            <strong>Status:</strong>
+            <span
+              class="badge"
+              [ngClass]="course.isFree ? 'bg-success' : 'bg-danger'"
+            >
+              {{ course.isFree ? 'Free' : 'Paid' }}
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

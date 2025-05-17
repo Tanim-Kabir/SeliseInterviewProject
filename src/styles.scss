@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+.cursor {
+  cursor: pointer;
+}
+.main_div {
+  font-family: inter;
+  padding-inline: 3%;
+  padding-top: 0px;
+  background-color: #f1f2f5;
+  min-height: 100vh;
+}
+.payment-method {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #272727;
+  padding-top: 16px;
+  margin-bottom: 32px;
+}
+.c_0054a6 {
+  color: #0054a6 !important;
+}
+.blue-button-sm {
+  display: inline-block;
+  align-content: center;
+  width: fit-content;
+  height: 32px;
+  max-height: 32px;
+  white-space: nowrap;
+  min-height: 32px;
+  border-radius: 4px;
+  padding-inline: 16px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  border: 0;
+}
+.blue-button-sm {
+  color: #ffd602;
+  border: 1px solid #0054a6;
+  background-color: #0054a6;
+}
+.blue-button-sm:hover {
+  color: #0054a6;
+  border: 1px solid #ffd602;
+  background-color: #ffd602;
+}

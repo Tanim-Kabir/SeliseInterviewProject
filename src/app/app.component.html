@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row flex-nowrap">
+    <div
+      class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 w-auto"
+      style="padding-left: 0px !important"
+    >
+      <div class="align-items-sm-start menu_section">
+        <ul
+          class="nav nav-pills nav_bar mb-sm-auto align-items-sm-start"
+          id="menu"
+          [ngStyle]="{ width: menuOpen ? '225px !important' : '55px' }"
+        >
+          <li class="menu_item_a" *ngFor="let item of menuItems">
+            <a
+              [routerLink]="item.routerLink"
+              [ngClass]="
+                isActive(item.menu_index)
+                  ? 'nav-link high_height active'
+                  : 'nav-link high_height'
+              "
+              (click)="setMenuIndex(item)"
+            >
+              <div class="border-none">
+                <div *ngIf="menuOpen" class="ms-1 d-none d-sm-inline">
+                  {{ item.name }}
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col dashboard_body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
