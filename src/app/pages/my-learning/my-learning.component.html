@@ -1,1 +1,99 @@
-<p>my-learning works!</p>
+<div class="main_div">
+  <div class="payment-method">My Learning</div>
+
+  <div class="datagrid_container" style="margin-top: 16px; margin-bottom: 16px">
+    <div class="payment-method" *ngIf="enrichedEnrollments?.length === 0">
+      No courses available.
+    </div>
+    
+    <dx-data-grid
+      *ngIf="enrichedEnrollments?.length > 0"
+      class="donor_list_data_grid"
+      [dataSource]="courseList"
+      [showBorders]="false"
+      [showColumnLines]="false"
+      [showRowLines]="false"
+      [allowColumnResizing]="true"
+      columnResizingMode="widget"
+      [focusedRowEnabled]="false"
+      [rowAlternationEnabled]="false"
+      rowTemplate="rowDonationList"
+      [wordWrapEnabled]="true"
+      [columnAutoWidth]="true"
+    >
+      <dxo-paging [pageSize]="15" [pageIndex]="0"> </dxo-paging>
+      <dxo-pager
+        [visible]="true"
+        [showPageSizeSelector]="false"
+        [allowedPageSizes]="[15]"
+        [showInfo]="false"
+        [showNavigationButtons]="true"
+      >
+      </dxo-pager>
+      <dxo-search-panel [visible]="true" [width]="600" placeholder="Search...">
+      </dxo-search-panel>
+      <dxo-header-filter
+        [visible]="true"
+        [allowSearch]="true"
+      ></dxo-header-filter>
+      <dxo-scrolling
+        [scrollByContent]="true"
+        columnRenderingMode="virtual"
+        showScrollbar="always"
+      ></dxo-scrolling>
+      <dxo-sorting mode="multiple"></dxo-sorting>
+      <dxi-column
+        caption="Title"
+        dataField="title"
+        alignment="left"
+        [allowFiltering]="false"
+      ></dxi-column>
+      <dxi-column
+        caption="Progress"
+        dataField="progress"
+        alignment="left"
+      ></dxi-column>
+      <dxi-column
+        caption="Status"
+        dataField="status"
+        alignment="center"
+        [allowFiltering]="false"
+      >
+      </dxi-column>
+      <dxi-column caption="Completed At" dataField="completedAt" alignment="center">
+      </dxi-column>
+      <tbody class="bg-white" *dxTemplate="let row of 'rowDonationList'">
+        <tr
+          style="display: contents !important"
+          class="cursor"
+          title="Details"
+          (click)="goToDetailPage(row?.data?.id)"
+        >
+          <td>
+            <div class="donor-name c_0054a6 text-start">
+              {{ row?.data?.title }}
+            </div>
+          </td>
+          <td>
+            <div class="donor-name fw-normal text-start">
+              {{ row?.data?.progress }}
+            </div>
+          </td>
+          <td>
+            <div class="donor-email">
+              {{ row?.data?.status || "N/A" }}
+            </div>
+          </td>
+          <td>
+            <div
+              class="donor-name"
+            >
+              {{ row?.data?.completedAt | date }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </dx-data-grid>
+  </div>
+</div>
+

@@ -7,6 +7,7 @@ import { CoursesComponent } from './pages/courses/courses.component';
 import { CourseDetailComponent } from './pages/course-detail/course-detail.component';
 import { SearchCoursesComponent } from './pages/search-courses/search-courses.component';
 import { FormsModule } from '@angular/forms';
+import { MyLearningComponent } from './pages/my-learning/my-learning.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';
     CoursesComponent,
     CourseDetailComponent,
     SearchCoursesComponent,
+    MyLearningComponent
   ],
   imports: [BrowserModule, AppRoutingModule, DevExtremeModule, FormsModule],
   providers: [],

@@ -1,0 +1,157 @@
+.main_div {
+  font-family: inter;
+  padding-inline: 3%;
+  padding-top: 0px;
+  background-color: #f1f2f5;
+  min-height: 100vh;
+}
+.payment-method {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  color: #272727;
+  padding-top: 16px;
+  margin-bottom: 32px;
+}
+
+//data-grid
+.donor_list_data_grid {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  color: #272727;
+}
+.donor-name {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  color: black;
+  margin-top: 8px;
+}
+.fs_18 {
+  font-size: 18px !important;
+  font-weight: 400;
+  line-height: 27px !important;
+}
+.donor-email {
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: black;
+  margin-top: 8px;
+}
+::ng-deep {
+  .time_line .dx-texteditor-input {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Inter;
+    margin-top: 8px;
+  }
+  .time_line .dx-texteditor-buttons-container,
+  .dx-daterangebox-separator {
+    margin-right: 16px;
+    padding: 0;
+  }
+  .dx-texteditor-container {
+    background-color: #f8f8f8;
+  }
+  .dx-datagrid-table.dx-datagrid-table-fixed {
+    table-layout: fixed;
+    border-spacing: 0px 3px;
+    border-collapse: separate;
+    background-color: #f1f2f5;
+  }
+  .dx-datagrid-rowsview.dx-scrollable.dx-visibility-change-handler.dx-scrollable-both.dx-scrollable-simulated {
+    border: none;
+  }
+  .td {
+    border: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: black;
+  }
+  .dx-row.dx-header-row {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 60px;
+    margin: 4px;
+    color: #0054a6;
+    background-color: #f2f9ff;
+  }
+  .dx-datagrid-scrollable-simulated.dx-datagrid-content.dx-datagrid-scroll-container {
+    height: 60px !important;
+  }
+  .dx-datagrid-content .dx-datagrid-table .dx-row > td:first-child {
+    // padding-left: 29px;
+  }
+  .donor_list_data_grid .dx-datagrid-pager {
+    border-top: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f2f5;
+    padding-top: 12px;
+  }
+  .donor_list_data_grid .dx-pager .dx-pages .dx-selection {
+    cursor: inherit;
+    text-shadow: none;
+    color: white;
+    background-color: #0054a6;
+    border-radius: 8px;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    width: 30px;
+  }
+  .donor_list_data_grid .dx-pager .dx-pages {
+    color: #939393;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+  .donor_list_data_grid .dx-pager .dx-pages .dx-page-indexes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 150%;
+    height: 70px;
+    border-radius: 8px;
+  }
+  .dx-datagrid-headers {
+    border-bottom: none;
+  }
+  .dx-datagrid .dx-row > td {
+    padding: 0px 7px;
+  }
+  .dx-datagrid-headers .dx-datagrid-table .dx-row > td {
+    border-bottom: 0x solid #ffffff;
+  }
+  .dx-overlay-wrapper.dx-popup-wrapper.dx-overlay-shader {
+    z-index: 999 !important;
+  }
+  .dx-datagrid-header-panel {
+    padding-top: 8px;
+  }
+}
+.c_0054a6 {
+  color: #0054a6 !important;
+}
+.font_18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.font_18_bold {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 27px;
+}
