@@ -166,14 +166,14 @@ export class AppComponent implements OnInit {
   ];
 
   sampleEnrollments: Enrollment[] = [
-    {
-      userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
-      courseId: 'c1f3a138-8b8b-41f3-9861-b1741f51918b',
-      status: 'completed',
-      progress: 100,
-      enrolledAt: '2025-04-01T09:00:00Z',
-      completedAt: '2025-04-07T16:00:00Z',
-    }
+    // {
+    //   userId: 'b5a3f4b8-d41e-4e9c-8e5b-f7b203c91cf2',
+    //   courseId: 'c1f3a138-8b8b-41f3-9861-b1741f51918b',
+    //   status: 'completed',
+    //   progress: 100,
+    //   enrolledAt: '2025-04-01T09:00:00Z',
+    //   completedAt: '2025-04-07T16:00:00Z',
+    // }
   ];
 
   public setMenuIndex(menu: any): void {

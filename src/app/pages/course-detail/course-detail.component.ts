@@ -5,6 +5,7 @@ import { Course } from '../../shared/interface/course.interface';
 import { User } from '../../shared/interface/user.interface';
 import { Enrolled } from '../../shared/interface/enrolled.interface';
 import { LocalStorageDataModel } from '../../shared/model/local-storage-data.model';
+import { Enrollment } from '../../shared/interface/enrollment.interface';
 
 @Component({
   selector: 'app-course-detail',
@@ -18,7 +19,9 @@ export class CourseDetailComponent implements OnInit {
   prerequisites: Course[] = [];
   userData: LocalStorageDataModel =
     this.localStorageService.getLocalStorage('localStorageData');
-  enrolled: string[] = this.userData?.courses?.map((item) => item.id) || [];
+  enrollments: Enrollment[] =
+    this.localStorageService.getLocalStorage('enrollments');
+  enrolled: string[] = this.enrollments?.map((item) => item.courseId) || [];
 
   isPrerequisiteMatched: boolean = true;
 
@@ -43,13 +46,18 @@ export class CourseDetailComponent implements OnInit {
       this.prerequisites = this.courseList.filter((item) =>
         prerequisites.includes(item?.id)
       );
+      console.log(this.prerequisites);
+      console.log(this.enrolled);
 
       if (this.prerequisites.length === 0) {
-        this.isPrerequisiteMatched = true;
-      } else {
-        this.isPrerequisiteMatched = this.prerequisites.every((item) =>
-          this.enrolled.includes(item?.id)
-        );
+        this.isPrerequisiteMatched = false;
+      } else if (this.prerequisites.length > 0) {
+        for (const item of this.prerequisites) {
+          if (!this.enrolled.includes(item?.id)) {
+            this.isPrerequisiteMatched = false;
+            break;
+          }
+        }
       }
     });
   }
